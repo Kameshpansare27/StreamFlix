@@ -1,0 +1,501 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STREAMFLIX - Movie Streaming Website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!--- google font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo_pic.png' %}" />
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <header id="navbar">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/"><img src="{% static 'images/logo_pic.png' %}" alt="" width="60px" /><img src="{% static 'images/logo_name.png' %}" alt="" width="250px" /></a>
+        </div>
+        <ul class="nav-list">
+          <div class="logo">
+          
+            <button class="close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+          <li class="home"><a href="#">home</a></li>
+          <li><a href="signin/">movie</a></li>
+          <li><a href="signin/">Anime</a></li>
+          <li><a href="signin/">pricing</a></li>
+          <a href="signin/"><button class="btn">SIGN IN</button></a>
+          
+        </ul>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- hero section starts  -->
+    <section class="hero">
+      <div class="main">
+        <div class="content">
+          <p>STREAMFLIX</p>
+          <h1>Unlimited <strong>Movie</strong>, TVs Shows, & More.</h1>
+          <div class="meta-wrapper">
+            <div class="badge">
+              <span>PG 18</span>
+              <span>HD</span>
+            </div>
+            <div class="genre">
+              <span><a href="#">Action,</a> <a href="#">Drama</a></span>
+            </div>
+            <div class="date-time">
+              <span><i class="fa-solid fa-calendar-days"></i>&nbsp 24/7 </span>
+              {% comment %} <span><i class="fa-regular fa-clock"></i> </span> {% endcomment %}
+            </div>
+          </div>
+          <div class="watch-btn">
+            <a href="{% url 'signin' %}">
+            <button><i class="fa-solid fa-play"></i> Watch Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- upcoming movie section starts  -->
+    <section class="upcoming-movie">
+      <div class="header">
+        <div class="subtitle">
+          <small>online Streaming</small>
+          <h4>Upcoming Movies</h4>
+        </div>
+        <div class="buttons">
+          <button>Movies</button>
+          <button>TV Shows</button>
+          <button>Anime</button>
+        </div>
+      </div>
+      <div class="movie-card">
+        <div class="wrapper">
+          <ul class="movie-carousel">
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/upcoming-1.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href="movie-detail.html"><h4>The Northman</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>HD</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 137 min</span>
+                  <span><i class="fa-solid fa-star"></i> 8.5</span>
+                </div>
+              </div>
+              
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/upcoming-2.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href="movie-detail.html"><h4>Doctor Strange</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>4K</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 126 min</span>
+                  <span><i class="fa-solid fa-star"></i> 8.5</span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/upcoming-3.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Memory</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>2K</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> N/A</span>
+                  <span><i class="fa-solid fa-star"></i> 8.5</span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/upcoming-4.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Unbearable Weight</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>HD</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 107 min</span>
+                  <span><i class="fa-solid fa-star"></i> 8.5</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- service section starts -->
+    <section class="service">
+      <div class="main">
+        <div class="img">
+          <img src="{% static 'images/service-banner.jpg' %}" alt="" />
+        </div>
+        <div class="content">
+          <small>our services</small>
+          <h4>Watch Your All Shows in HD </h4>
+          <p>
+            Lorem ipsum dolor sit amet, consecetur adipiscing elseddo eiusmod
+            tempor.There are many variations of passages of lorem Ipsum
+            available, but the majority have suffered alteration in some
+            injected humour.
+          </p>
+          <ul class="list">
+            <li>
+              <div class="service-card">
+                <div class="img">
+                  <div class="icon">
+                    <i class="fa-solid fa-tv"></i>
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h5>Enjoy on Your Mobile</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed
+                    do eiusmod tempor.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <hr />
+            <li>
+              <div class="service-card">
+                <div class="img">
+                  <div class="icon">
+                    <i class="fa-solid fa-video"></i>
+                  </div>
+                </div>
+                <div class="service-content">
+                  <h5>Watch Everywhere</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet, consecetur adipiscing elit, sed
+                    do eiusmod tempor.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- top movie section start  -->
+    <section class="top-movie same">
+      <div class="header">
+        <small>online streaming</small>
+        <h4>Top Rated Movies</h4>
+      </div>
+      <div class="top-movie-main">
+        <div class="buttons">
+          <button>movies</button>
+          <button>Actions</button>
+          <button>Anime</button>
+          
+        </div>
+        <div class="movie-card">
+          <ul class="wrapper">
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/movie-1.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Sonic</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>2K</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 122 min</span>
+                  <span><i class="fa-solid fa-star"></i> 7.8</span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/movie-2.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Morbius</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>HD</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 104 min</span>
+                  <span><i class="fa-solid fa-star"></i> 5.9</span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/movie-3.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Adam Project</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>4K</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 106 min</span>
+                  <span><i class="fa-solid fa-star"></i> 7.0</span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/movie-4.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Free Guy</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>4K</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 115 min</span>
+                  <span><i class="fa-solid fa-star"></i> 7.7</span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/movie-5.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Batman</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>4K</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 176 min</span>
+                  <span><i class="fa-solid fa-star"></i> 7.9</span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/movie-6.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Uncharted</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>HD</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 116 min</span>
+                  <span><i class="fa-solid fa-star"></i> 7.0</span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/movie-7.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Death On..</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>2K</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 127 min</span>
+                  <span><i class="fa-solid fa-star"></i> 6.5</span>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img">
+                <a href=""><img src="{% static 'images/movie-8.png' %}" alt="" /></a>
+              </div>
+              <div class="title">
+                <a href=""><h4>Kings Man</h4></a>
+                <span>2024</span>
+              </div>
+              <div class="footer">
+                <span>HD</span>
+                <div class="time-rating">
+                  <span><i class="fa-regular fa-clock"></i> 131 min</span>
+                  <span><i class="fa-solid fa-star"></i> 7.0</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- tvs series section starts  -->
+    <section class="tv-series same">
+      <div class="header">
+        <small>best Anime series</small>
+        <h4>World Best Anime</h4>
+      </div>
+      <div class="movie-card">
+        <ul class="wrapper">
+          <li class="card">
+            <div class="img">
+              <a href=""><img src="{% static 'images/series-1.png' %}" alt="" /></a>
+            </div>
+            <div class="title">
+              <a href=""><h4>Moon Knight</h4></a>
+              <span>2024</span>
+            </div>
+            <div class="footer">
+              <span>2K</span>
+              <div class="time-rating">
+                <span><i class="fa-regular fa-clock"></i> 47 min</span>
+                <span><i class="fa-solid fa-star"></i> 8.6</span>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <a href=""><img src="{% static 'images/series-2.png' %}" alt="" /></a>
+            </div>
+            <div class="title">
+              <a href=""><h4>Halo</h4></a>
+              <span>2024</span>
+            </div>
+            <div class="footer">
+              <span>2K</span>
+              <div class="time-rating">
+                <span><i class="fa-regular fa-clock"></i> 59 min</span>
+                <span><i class="fa-solid fa-star"></i> 8.8</span>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <a href=""><img src="{% static 'images/series-3.png' %}" alt="" /></a>
+            </div>
+            <div class="title">
+              <a href=""><h4>Viking valhalla</h4></a>
+              <span>2024</span>
+            </div>
+            <div class="footer">
+              <span>2K</span>
+              <div class="time-rating">
+                <span><i class="fa-regular fa-clock"></i> 51 min</span>
+                <span><i class="fa-solid fa-star"></i> 8.3</span>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <a href=""><img src="{% static 'images/series-4.png' %}" alt="" /></a>
+            </div>
+            <div class="title">
+              <a href=""><h4>Money Heist</h4></a>
+              <span>2017</span>
+            </div>
+            <div class="footer">
+              <span>4K</span>
+              <div class="time-rating">
+                <span><i class="fa-regular fa-clock"></i> 70 min</span>
+                <span><i class="fa-solid fa-star"></i> 8.3</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  
+    <!-- footer section start -->
+    <footer>
+      <div class="main">
+        <div class="footer-top">
+          <nav>
+            <div class="logo">
+              <a href="/"><img src="{% static 'images/logo_pic.png' %}" alt="" width="60px" /><img src="{% static 'images/logo_name.png' %}" alt="" width="250px" /></a>
+
+            </div>
+            <ul class="list">
+              <li><a href="#navbar">home</a></li>
+              <li><a href="#navbar">movie</a></li>
+              <li><a href="#navbar">Anime</a></li>
+              <li><a href="#navbar">pricing</a></li>
+            </ul>
+          </nav>
+          <br>
+          <div class="links">
+            <div class="text-links">
+              <a href="#navbar">faq</a>
+              <a href="#navbar">help center</a>
+              <a href="#navbar">terms of use</a>
+              <a href="#navbar">privacy</a>
+            </div>
+            <div class="social-links">
+              <a href="https://www.facebook.com/kamesh.pansare.9" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://github.com/Kameshpansare27" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="www.linkedin.com/in/kamesh-pansare-728a01202" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/kameshpansare27/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          {% comment %} <hr> {% endcomment %}
+          
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&#169; 2024 <a href="">kameshpansare27</a>. All Rights Reserved</p>
+          </div>
+          <div class="img">
+            <img src="{% static 'images/footer-bottom-img.png' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top"><i class="fa-solid fa-chevron-up"></i></button>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <script>
+      document.addEventListener("click", function () {
+        window.location.href = "{% url 'signin' %}";
+      });
+    </script>
+  </body>
+</html>
